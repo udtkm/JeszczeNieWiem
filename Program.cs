@@ -26,7 +26,7 @@ namespace ConsoleApp33
                 if (n == 8)
                 {
                     break;
-                }
+                } 
                 if(n==1)
                 {
 
@@ -40,7 +40,7 @@ namespace ConsoleApp33
                         Console.WriteLine("Błąd nie pobrało pliku");
                     }
                 }
-                Console.ReadKey();
+                
 
 
             }
