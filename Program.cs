@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
 
 namespace ConsoleApp33
 {
@@ -26,7 +27,22 @@ namespace ConsoleApp33
                 {
                     break;
                 }
+                if(n==1)
+                {
+
+                    WebClient webClient = new WebClient();
+                    try
+                    {
+                        webClient.DownloadFile("https://s3.zylowski.net/public/input/2.txt", "2.txt");
+                    }
+                    catch (WebException e)
+                    {
+                        Console.WriteLine("Błąd nie pobrało pliku");
+                    }
+                }
                 Console.ReadKey();
+
+
             }
         }
     }
