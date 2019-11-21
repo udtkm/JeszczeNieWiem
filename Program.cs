@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
+using System.IO;
 
 namespace ConsoleApp33
 {
@@ -33,16 +34,49 @@ namespace ConsoleApp33
                     WebClient webClient = new WebClient();
                     try
                     {
-                        webClient.DownloadFile("https://s3.zylowski.net/public/input/2.txt", "2.txt");
+                        webClient.DownloadFile("https://s3.zylowski.net/public/input/2.txt", "2.txt");   
                     }
                     catch (WebException e)
                     {
                         Console.WriteLine("Błąd nie pobrało pliku");
                     }
                 }
-                
 
+                if (n == 4)
+                {
+                    try
+                    {
+                        string text = System.IO.File.ReadAllText(@"2.txt");
+                        if (text != null)
+                        {
+                            if (text == null)
+                            {
+                                Console.WriteLine("nie pobrano pliku");
+                                break;
+                            }
+                            int tmp = 0;
+                            foreach (char znak in text)
+                            {
+                                string x = Convert.ToString(znak);
+                                if (x == "," || x=="." || x == ";" || x=="'" || x == "?" || x == "!" || x == "-" || x == ":")
+                                {
+                                    tmp++;
 
+                                }
+
+                            }
+                            Console.WriteLine("Ilość znaków interpunkcyjnych = " + tmp);
+                        }
+
+                    }
+
+                    catch(FileNotFoundException e)
+                    {
+                        Console.WriteLine("Błąd, nie znaleziono pliku, najpierw pobierz plik");
+                    }
+
+                    
+                }
             }
         }
     }
