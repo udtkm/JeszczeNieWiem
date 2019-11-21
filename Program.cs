@@ -77,6 +77,40 @@ namespace ConsoleApp33
 
                     
                 }
+
+                if (n== 5)
+                {
+                    Console.Clear();
+                    try
+                    {
+                        string text = System.IO.File.ReadAllText(@"2.txt");
+                        if (text != null)
+                        {
+                            int tmp = 0;
+                            foreach (char znak in text)
+                            {
+                                
+                                if (znak == '.' || znak=='!' || znak == '?')
+                                {
+                                    tmp++;
+
+                                }
+
+                            }
+                            Console.WriteLine("Ilość zdań w pliku = " + tmp);
+                        }
+
+                    }
+
+                    catch (FileNotFoundException e)
+                    {
+                        Console.WriteLine("Błąd, nie znaleziono pliku, najpierw pobierz plik");
+                    }
+
+                    
+
+
+                }
             }
         }
     }
