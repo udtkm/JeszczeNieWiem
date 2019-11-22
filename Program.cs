@@ -41,6 +41,43 @@ namespace ConsoleApp33
                         Console.WriteLine("Błąd przy pobraniu pliku");
                     }
                 }
+                if (n == 2)
+                {
+
+                    Console.Clear();
+                    try
+                    {
+                        string text = System.IO.File.ReadAllText(@"2.txt");
+                        if (text != null)
+                        {
+                            if (text == null)
+                            {
+                                Console.WriteLine("nie pobrano pliku");
+                                break;
+                            }
+                            int tmp = 0;
+                            foreach (char y in text)
+                            {
+                                string x = Convert.ToString(y);
+                                if (x != "," && x != "." && x != ";" && x != "'" && x != "?" && x != "!" && x != "-" && x != ":")
+                                {
+                                    tmp++;
+
+                                }
+
+                            }
+                            Console.WriteLine("Ilość liter w pliku : " + tmp);
+                        }
+
+                    }
+
+                    catch (FileNotFoundException e)
+                    {
+                        Console.WriteLine("Błąd, nie znaleziono pliku, najpierw pobierz plik");
+                    }
+
+
+                }
 
                 if (n == 3)
                 {
