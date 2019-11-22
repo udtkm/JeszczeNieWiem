@@ -111,6 +111,34 @@ namespace ConsoleApp33
 
 
                 }
+                if (n == 7)
+                {
+                    string text = System.IO.File.ReadAllText(@"2.txt");
+                    int iloscZdan = 0;
+                    int iloscZnakow =0;
+                    foreach (char znak in text)
+                    {
+
+                        if (znak == '.' || znak == '!' || znak == '?')
+                        {
+                            iloscZdan++;
+
+                        }
+                        if (znak == ',' || znak == '.' || znak == ';' || Convert.ToString(znak) == "'" || znak == '?' || znak == '!' || znak == '-' || znak == ':')
+                        {
+                            iloscZnakow++;
+
+                        }
+
+
+                    }
+                    string path = @"statystyki.txt";
+                    StreamWriter sw = new StreamWriter(path);
+                    sw.WriteLine("ILość znakow interpunkcyjnych  w pliku = " + iloscZnakow);
+                    sw.WriteLine("ILość zdań w pliku = " + iloscZdan);
+                    sw.Close();
+
+                }
             }
         }
     }
