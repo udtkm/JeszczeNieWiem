@@ -38,9 +38,11 @@ namespace ConsoleApp33
                     }
                     catch (WebException e)
                     {
-                        Console.WriteLine("Błąd nie pobrało pliku");
+                        Console.WriteLine("Błąd przy pobraniu pliku");
                     }
                 }
+
+
 
                 if (n == 4)
                 {
