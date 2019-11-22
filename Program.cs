@@ -38,12 +38,52 @@ namespace ConsoleApp33
                     }
                     catch (WebException e)
                     {
-                        Console.WriteLine("Błąd nie pobrało pliku");
+                        Console.WriteLine("Błąd przy pobraniu pliku");
                     }
                 }
 
+                if (n == 3)
+                {
+
+                    Console.Clear();
+                    try
+                    {
+                        string text = System.IO.File.ReadAllText(@"2.txt");
+                        if (text != null)
+                        {
+                            if (text == null)
+                            {
+                                Console.WriteLine("nie pobrano pliku");
+                                break;
+                            }
+                            int words = 0;
+                            foreach (char znak in text)
+                            {
+                                string x = Convert.ToString(znak);
+                                if (x==" ")
+                                {
+                                    words++;
+
+                                }
+
+                            }
+                            Console.WriteLine("Ilość wyrazów w pliku = " + words);
+                        }
+
+                    }
+
+                    catch (FileNotFoundException e)
+                    {
+                        Console.WriteLine("Błąd, nie znaleziono pliku, najpierw pobierz plik");
+                    }
+
+
+                }
+
+
                 if (n == 4)
                 {
+
                     try
                     {
                         string text = System.IO.File.ReadAllText(@"2.txt");
@@ -65,6 +105,7 @@ namespace ConsoleApp33
                                 }
 
                             }
+                           
                             Console.WriteLine("Ilość znaków interpunkcyjnych = " + tmp);
                         }
 
@@ -75,7 +116,7 @@ namespace ConsoleApp33
                         Console.WriteLine("Błąd, nie znaleziono pliku, najpierw pobierz plik");
                     }
 
-                    
+                   
                 }
 
                 if (n== 5)
