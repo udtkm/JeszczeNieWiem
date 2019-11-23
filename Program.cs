@@ -119,7 +119,7 @@ namespace ConsoleApp33
 
                 if (n == 4)
                 {
-
+                    /* na potrzeby pull requesta*/
                     try
                     {
                         string text = System.IO.File.ReadAllText(@"2.txt");
