@@ -117,7 +117,6 @@ namespace ConsoleApp33
 
                 }
 
-
                 if (n == 4)
                 {
 
@@ -135,25 +134,25 @@ namespace ConsoleApp33
                             foreach (char znak in text)
                             {
                                 string x = Convert.ToString(znak);
-                                if (x == "," || x=="." || x == ";" || x=="'" || x == "?" || x == "!" || x == "-" || x == ":")
+                                if (x == "," || x == "." || x == ";" || x == "'" || x == "?" || x == "!" || x == "-" || x == ":")
                                 {
                                     tmp++;
 
                                 }
 
                             }
-                           
+
                             Console.WriteLine("Ilość znaków interpunkcyjnych = " + tmp);
                         }
 
                     }
 
-                    catch(FileNotFoundException e)
+                    catch (FileNotFoundException e)
                     {
                         Console.WriteLine("Błąd, nie znaleziono pliku, najpierw pobierz plik");
                     }
 
-                   
+
                 }
 
                 if (n== 5)
