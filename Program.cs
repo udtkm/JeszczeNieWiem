@@ -155,8 +155,9 @@ namespace ConsoleApp33
 
                 }
 
-                if (n== 5)
+                if (n == 5)
                 {
+
                     Console.Clear();
                     try
                     {
@@ -166,8 +167,8 @@ namespace ConsoleApp33
                             int tmp = 0;
                             foreach (char znak in text)
                             {
-                                
-                                if (znak == '.' || znak=='!' || znak == '?')
+
+                                if (znak == '.' || znak == '!' || znak == '?')
                                 {
                                     tmp++;
 
@@ -184,7 +185,7 @@ namespace ConsoleApp33
                         Console.WriteLine("Błąd, nie znaleziono pliku, najpierw pobierz plik");
                     }
 
-                    
+
 
 
                 }
