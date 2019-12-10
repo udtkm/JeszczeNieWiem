@@ -47,6 +47,7 @@ namespace ConsoleApp33
                     Console.Clear();
                     try
                     {
+                        /* changing comment for automatic close issue */
                         string text = System.IO.File.ReadAllText(@"2.txt");
                         if (text != null)
                         {
