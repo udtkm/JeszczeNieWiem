@@ -15,6 +15,7 @@ namespace ConsoleApp33
             int n = 0;
             while (n != 8)
             {
+                /* for issue #1 editing text in comment */
                 Console.WriteLine("1. Pobierz plik z internetu");
                 Console.WriteLine("2. Zlicz liczbę liter w podanym pliku");
                 Console.WriteLine("3. Zlicz liczbę wyrazów w pliku");
