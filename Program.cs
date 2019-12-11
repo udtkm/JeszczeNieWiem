@@ -27,6 +27,24 @@ namespace ConsoleApp33
                 n = Convert.ToInt32(Console.ReadLine());
                 if (n == 8)
                 {
+                    try
+                    {
+                        System.IO.File.Delete(@"2.txt");
+                    }
+                    catch (System.IO.IOException e)
+                    {
+                        Console.WriteLine("błąd przy usuwaniu pliku");
+                        return;
+                    }
+                    try
+                    {
+                        System.IO.File.Delete(@"statystyki.txt");
+                    }
+                    catch (System.IO.IOException e)
+                    {
+                        Console.WriteLine("błąd przy usuwaniu pliku");
+                        return;
+                    }
                     break;
                 } 
                 if(n==1)

@@ -1,2 +1,0 @@
-ILość znakow interpunkcyjnych  w pliku = 146
-ILość zdań w pliku = 98
