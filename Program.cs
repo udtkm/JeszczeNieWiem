@@ -42,7 +42,7 @@ namespace ConsoleApp33
                     }
                 }
 
-                if (n == 3)
+                if (n == 3)             //counting letters
                 {
 
                     Console.Clear();
