@@ -185,11 +185,43 @@ namespace ConsoleApp33
                     {
                         Console.WriteLine("Błąd, nie znaleziono pliku, najpierw pobierz plik");
                     }
+                if (n == 6)
+                {
+                    Console.Clear();
+                    try
+                    {
+                        string text = System.IO.File.ReadAllText(@"2.txt");
+                        if (text != null)
+                        {
 
-                    
+                            int[] character = new int[(int)char.MaxValue];
+
+                            foreach (char tp in text)
+                            {
+
+                                character[(int)tp]++;
+                            }
 
 
+                            for (int i = 0; i < (int)char.MaxValue; i++)
+                            {
+                                if (character[i] > 0 && char.IsLetterOrDigit((char)i))
+                                {
+                                    Console.WriteLine("{0},{1}", (char)i, character[i]);
+                                }
+                            }
+
+
+                        }
+                    }
+                    catch (FileNotFoundException e)
+                    {
+                        Console.WriteLine("Błąd, nie znaleziono pliku, najpierw pobierz plik");
+                    }
                 }
+            }
+                } 
+                
                 if (n == 7)
                 {
                     string text = System.IO.File.ReadAllText(@"2.txt");
@@ -221,4 +253,3 @@ namespace ConsoleApp33
             }
         }
     }
-}
