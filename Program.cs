@@ -25,8 +25,10 @@ namespace ConsoleApp33
                 Console.WriteLine("7. Zapisz statystyki z punktów 2-5 do pliku statystyki.txt");
                 Console.WriteLine("8. Wyjście z programu");
                 n = Convert.ToInt32(Console.ReadLine());
+                
                 if (n == 8)
                 {
+                    //delete files
                     try
                     {
                         System.IO.File.Delete(@"2.txt");
