@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +15,7 @@ namespace ConsoleApp33
             int n = 0;
             while (n != 8)
             {
+                /* for issue #1 editing text in comment */
                 Console.WriteLine("1. Pobierz plik z internetu");
                 Console.WriteLine("2. Zlicz liczbę liter w podanym pliku");
                 Console.WriteLine("3. Zlicz liczbę wyrazów w pliku");
@@ -79,10 +80,10 @@ namespace ConsoleApp33
 
 
                 }
-
+               
                 if (n == 3)
                 {
-
+                    //counting letters
                     Console.Clear();
                     try
                     {
@@ -118,10 +119,9 @@ namespace ConsoleApp33
 
                 }
 
-
                 if (n == 4)
                 {
-
+                    /* na potrzeby pull requesta*/
                     try
                     {
                         string text = System.IO.File.ReadAllText(@"2.txt");
@@ -136,29 +136,30 @@ namespace ConsoleApp33
                             foreach (char znak in text)
                             {
                                 string x = Convert.ToString(znak);
-                                if (x == "," || x=="." || x == ";" || x=="'" || x == "?" || x == "!" || x == "-" || x == ":")
+                                if (x == "," || x == "." || x == ";" || x == "'" || x == "?" || x == "!" || x == "-" || x == ":")
                                 {
                                     tmp++;
 
                                 }
 
                             }
-                           
+
                             Console.WriteLine("Ilość znaków interpunkcyjnych = " + tmp);
                         }
 
                     }
 
-                    catch(FileNotFoundException e)
+                    catch (FileNotFoundException e)
                     {
                         Console.WriteLine("Błąd, nie znaleziono pliku, najpierw pobierz plik");
                     }
 
-                   
+
                 }
 
-                if (n== 5)
+                if (n == 5)
                 {
+
                     Console.Clear();
                     try
                     {
@@ -168,8 +169,8 @@ namespace ConsoleApp33
                             int tmp = 0;
                             foreach (char znak in text)
                             {
-                                
-                                if (znak == '.' || znak=='!' || znak == '?')
+
+                                if (znak == '.' || znak == '!' || znak == '?')
                                 {
                                     tmp++;
 
@@ -185,6 +186,12 @@ namespace ConsoleApp33
                     {
                         Console.WriteLine("Błąd, nie znaleziono pliku, najpierw pobierz plik");
                     }
+
+
+
+
+                }
+
                 if (n == 6)
                 {
                     Console.Clear();
@@ -214,15 +221,16 @@ namespace ConsoleApp33
 
                         }
                     }
+
                     catch (FileNotFoundException e)
                     {
                         Console.WriteLine("Błąd, nie znaleziono pliku, najpierw pobierz plik");
                     }
                 }
             }
-                } 
-                
-                if (n == 7)
+
+
+            if (n == 7)
                 {
                     string text = System.IO.File.ReadAllText(@"2.txt");
                     int iloscZdan = 0;
