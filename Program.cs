@@ -25,7 +25,7 @@ namespace ConsoleApp33
                 Console.WriteLine("7. Zapisz statystyki z punktów 2-5 do pliku statystyki.txt");
                 Console.WriteLine("8. Wyjście z programu");
                 n = Convert.ToInt32(Console.ReadLine());
-                
+
                 if (n == 8)
                 {
                     //delete files
@@ -48,14 +48,14 @@ namespace ConsoleApp33
                         return;
                     }
                     break;
-                } 
-                if(n==1)
+                }
+                if (n == 1)
                 {
 
                     WebClient webClient = new WebClient();
                     try
                     {
-                        webClient.DownloadFile("https://s3.zylowski.net/public/input/2.txt", "2.txt");   
+                        webClient.DownloadFile("https://s3.zylowski.net/public/input/2.txt", "2.txt");
                     }
                     catch (WebException e)
                     {
@@ -100,7 +100,7 @@ namespace ConsoleApp33
 
 
                 }
-               
+
                 if (n == 3)
                 {
                     //counting letters
@@ -119,7 +119,7 @@ namespace ConsoleApp33
                             foreach (char znak in text)
                             {
                                 string x = Convert.ToString(znak);
-                                if (x==" ")
+                                if (x == " ")
                                 {
                                     words++;
 
@@ -141,7 +141,7 @@ namespace ConsoleApp33
 
                 if (n == 4)
                 {
-                    /* na potrzeby pull requesta*/
+                    /* counting punctuation marks*/
                     try
                     {
                         string text = System.IO.File.ReadAllText(@"2.txt");
@@ -179,7 +179,7 @@ namespace ConsoleApp33
 
                 if (n == 5)
                 {
-
+                    //counting sentences
                     Console.Clear();
                     try
                     {
@@ -247,37 +247,61 @@ namespace ConsoleApp33
                         Console.WriteLine("Błąd, nie znaleziono pliku, najpierw pobierz plik");
                     }
                 }
-            }
 
 
-            if (n == 7)
+
+                if (n == 7)
                 {
-                    string text = System.IO.File.ReadAllText(@"2.txt");
-                    int iloscZdan = 0;
-                    int iloscZnakow =0;
-                    foreach (char znak in text)
+                    try
                     {
-
-                        if (znak == '.' || znak == '!' || znak == '?')
+                        string text = System.IO.File.ReadAllText(@"2.txt");
+                        int sentences = 0;
+                        int punMarks = 0;
+                        int letters = 0;
+                        int words = 0;
+                        foreach (char znak in text)
                         {
-                            iloscZdan++;
+
+                            if (znak == '.' || znak == '!' || znak == '?')
+                            {
+                                sentences++;
+
+                            }
+                            if (znak == ',' || znak == '.' || znak == ';' || Convert.ToString(znak) == "'" || znak == '?' || znak == '!' || znak == '-' || znak == ':')
+                            {
+                                punMarks++;
+
+                            }
+
+                            if (Convert.ToString(znak) != "," && Convert.ToString(znak) != "." && Convert.ToString(znak) != ";" && Convert.ToString(znak) != "'" && Convert.ToString(znak) != "?" && Convert.ToString(znak) != "!" && Convert.ToString(znak) != "-" && Convert.ToString(znak) != ":")
+                            {
+                                letters++;
+
+                            }
+
+                            if (Convert.ToString(znak) == " ")
+                            {
+                                words++;
+
+                            }
+
+
 
                         }
-                        if (znak == ',' || znak == '.' || znak == ';' || Convert.ToString(znak) == "'" || znak == '?' || znak == '!' || znak == '-' || znak == ':')
-                        {
-                            iloscZnakow++;
-
-                        }
-
-
+                        string path = @"statystyki.txt";
+                        StreamWriter sw = new StreamWriter(path);
+                        sw.WriteLine("ILość liter w pliku = " + letters);
+                        sw.WriteLine("ILość wyrazów w pliku = " + words);
+                        sw.WriteLine("ILość znakow interpunkcyjnych  w pliku = " + punMarks);
+                        sw.WriteLine("ILość zdań w pliku = " + sentences);
+                        sw.Close();
                     }
-                    string path = @"statystyki.txt";
-                    StreamWriter sw = new StreamWriter(path);
-                    sw.WriteLine("ILość znakow interpunkcyjnych  w pliku = " + iloscZnakow);
-                    sw.WriteLine("ILość zdań w pliku = " + iloscZdan);
-                    sw.Close();
-
+                    catch (FileNotFoundException e)
+                    {
+                        Console.WriteLine("Błąd, nie znaleziono pliku, najpierw pobierz plik");
+                    }
                 }
             }
         }
     }
+}

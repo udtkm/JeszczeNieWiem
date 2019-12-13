@@ -1,0 +1,4 @@
+ILość liter w pliku = 5217
+ILość wyrazów w pliku = 1044
+ILość znakow interpunkcyjnych  w pliku = 146
+ILość zdań w pliku = 98

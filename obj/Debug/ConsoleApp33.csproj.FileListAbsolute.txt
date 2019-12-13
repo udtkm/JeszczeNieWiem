@@ -26,3 +26,10 @@ C:\Users\marci\Desktop\systemy kontroli błędów i wersji\JeszczeNieWiem\obj\De
 C:\Users\marci\Desktop\systemy kontroli błędów i wersji\JeszczeNieWiem\obj\Debug\ConsoleApp33.csproj.CoreCompileInputs.cache
 C:\Users\marci\Desktop\systemy kontroli błędów i wersji\JeszczeNieWiem\obj\Debug\ConsoleApp33.exe
 C:\Users\marci\Desktop\systemy kontroli błędów i wersji\JeszczeNieWiem\obj\Debug\ConsoleApp33.pdb
+C:\Users\Człowiek Renesansu\Desktop\Nowy folder\jeszcze nie woem da\JeszczeNieWiem\obj\Debug\ConsoleApp33.csprojResolveAssemblyReference.cache
+C:\Users\Człowiek Renesansu\Desktop\Nowy folder\jeszcze nie woem da\JeszczeNieWiem\obj\Debug\ConsoleApp33.csproj.CoreCompileInputs.cache
+C:\Users\Człowiek Renesansu\Desktop\Nowy folder\jeszcze nie woem da\JeszczeNieWiem\obj\Debug\ConsoleApp33.exe
+C:\Users\Człowiek Renesansu\Desktop\Nowy folder\jeszcze nie woem da\JeszczeNieWiem\obj\Debug\ConsoleApp33.pdb
+C:\Users\Człowiek Renesansu\Desktop\Nowy folder\jeszcze nie woem da\JeszczeNieWiem\bin\Debug\ConsoleApp33.exe.config
+C:\Users\Człowiek Renesansu\Desktop\Nowy folder\jeszcze nie woem da\JeszczeNieWiem\bin\Debug\ConsoleApp33.exe
+C:\Users\Człowiek Renesansu\Desktop\Nowy folder\jeszcze nie woem da\JeszczeNieWiem\bin\Debug\ConsoleApp33.pdb
