@@ -183,7 +183,7 @@ namespace ConsoleApp33
                             foreach (char znak in text)
                             {
                                 string x = Convert.ToString(znak);
-                                if (x == "," || x == "." || x == ";" || x == "'" || x == "?" || x == "!" || x == "-" || x == ":")
+                                if (x == "," || x == "." || x == "?")
                                 {
                                     tmp++;
 
@@ -191,7 +191,7 @@ namespace ConsoleApp33
 
                             }
 
-                            Console.WriteLine("Ilość znaków interpunkcyjnych = " + tmp);
+                            Console.WriteLine("Ilość znaków interpunkcyjnych(?,.) = " + tmp);
                         }
 
                     }
