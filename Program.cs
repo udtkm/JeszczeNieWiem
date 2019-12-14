@@ -16,7 +16,7 @@ namespace ConsoleApp33
             while (n != 8)
             {
                 /* for issue #1 editing text in comment */
-                Console.WriteLine("1. Pobierz plik z internetu");
+                Console.WriteLine("1. Wybierz plik wejściowy");
                 Console.WriteLine("2. Zlicz liczbę liter w podanym pliku");
                 Console.WriteLine("3. Zlicz liczbę wyrazów w pliku");
                 Console.WriteLine("4. Zlicz liczbę znaków interpukcyjnych w pliku");
@@ -51,16 +51,43 @@ namespace ConsoleApp33
                 }
                 if (n == 1)
                 {
+                    Console.WriteLine("Czy pobrać plik z internetu ? [T/N]");
+                    char t = Convert.ToChar(Console.ReadLine());
+                    if (t == 't' | t == 'T')
+                    {
+                        Console.WriteLine("Podaj adres pliku");
+                        string address = Convert.ToString(Console.ReadLine());
+                        Console.WriteLine("Podaj nazwę pliku");
+                        string nazwapliku = Convert.ToString(Console.ReadLine());
+                        WebClient webClient = new WebClient();
+                        try
+                        {
+                            webClient.DownloadFile(address, "2.txt");
+                        }
+                        catch (WebException e)
+                        {
+                            Console.WriteLine("Podaj prawidłowe dane");
+                        }
+                    }
+                    else
+                    {
 
-                    WebClient webClient = new WebClient();
-                    try
-                    {
-                        webClient.DownloadFile("https://s3.zylowski.net/public/input/2.txt", "2.txt");
+
+                        string filename;
+                        Console.WriteLine("Podaj nazwę pliku");
+                        filename = Console.ReadLine();
+                        if (File.Exists(filename))
+                        {
+                            File.OpenRead(filename);
+                            Console.WriteLine("Plik został otwarty!");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Podany plik '{filename}' nie istnieje w ścieżce {Directory.GetCurrentDirectory()}");
+                        }
                     }
-                    catch (WebException e)
-                    {
-                        Console.WriteLine("Błąd przy pobraniu pliku");
-                    }
+
+
                 }
                 if (n == 2)
                 {
