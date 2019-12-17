@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace ConsoleApp33
 {
@@ -25,6 +26,7 @@ namespace ConsoleApp33
                 Console.WriteLine("7. Zapisz statystyki z punktów 2-5 do pliku statystyki.txt");
                 Console.WriteLine("8. Wyjście z programu");
                 n = Convert.ToInt32(Console.ReadLine());
+
 
                 if (n == 8)
                 {
@@ -214,18 +216,21 @@ namespace ConsoleApp33
                         if (text != null)
                         {
                             int tmp = 0;
-                            foreach (char znak in text)
+                            for (int i = 0; i < text.Length; i++)
                             {
 
-                                if (znak == '.' || znak == '!' || znak == '?')
+                                if (text[i] == '.' || text[i] == '?')
                                 {
                                     tmp++;
-
                                 }
 
                             }
                             Console.WriteLine("Ilość zdań w pliku = " + tmp);
-                        }
+
+                     }
+                       
+                     
+
 
                     }
 
