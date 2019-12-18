@@ -46,3 +46,10 @@ C:\Users\letto\Documents\Visual Studio 2019\JeszczeNieWiem\bin\Debug\ConsoleApp3
 C:\Users\letto\Documents\Visual Studio 2019\JeszczeNieWiem\obj\Debug\ConsoleApp33.csprojAssemblyReference.cache
 C:\Users\letto\Documents\Visual Studio 2019\JeszczeNieWiem\obj\Debug\ConsoleApp33.exe
 C:\Users\letto\Documents\Visual Studio 2019\JeszczeNieWiem\obj\Debug\ConsoleApp33.pdb
+C:\Users\Tomasz\Desktop\xd\JeszczeNieWiem\bin\Debug\ConsoleApp33.exe.config
+C:\Users\Tomasz\Desktop\xd\JeszczeNieWiem\bin\Debug\ConsoleApp33.exe
+C:\Users\Tomasz\Desktop\xd\JeszczeNieWiem\bin\Debug\ConsoleApp33.pdb
+C:\Users\Tomasz\Desktop\xd\JeszczeNieWiem\obj\Debug\ConsoleApp33.csprojAssemblyReference.cache
+C:\Users\Tomasz\Desktop\xd\JeszczeNieWiem\obj\Debug\ConsoleApp33.csproj.CoreCompileInputs.cache
+C:\Users\Tomasz\Desktop\xd\JeszczeNieWiem\obj\Debug\ConsoleApp33.exe
+C:\Users\Tomasz\Desktop\xd\JeszczeNieWiem\obj\Debug\ConsoleApp33.pdb
