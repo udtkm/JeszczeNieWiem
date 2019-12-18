@@ -154,16 +154,13 @@ namespace ConsoleApp33
                                 Console.WriteLine("nie pobrano pliku");
                                 break;
                             }
+                            string[] source = text.Split(new char[] { '.', '?', '!', ' ', ';', ':', ',' }, StringSplitOptions.RemoveEmptyEntries);
                             int words = 0;
-                            foreach (char znak in text)
+                            foreach (string word in source)
                             {
-                                string x = Convert.ToString(znak);
-                                if (x == " ")
-                                {
+                                if (word.Length > 1)
                                     words++;
-
-                                }
-
+                                
                             }
                             Console.WriteLine("Ilość wyrazów w pliku = " + words);
                         }
