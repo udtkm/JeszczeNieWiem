@@ -106,18 +106,28 @@ namespace ConsoleApp33
                                 Console.WriteLine("nie pobrano pliku");
                                 break;
                             }
-                            int tmp = 0;
+                            int vowel = 0;
+                            int consonants = 0;
                             foreach (char y in text)
                             {
                                 string x = Convert.ToString(y);
-                                if (x != "," && x != "." && x != ";" && x != "'" && x != "?" && x != "!" && x != "-" && x != ":")
+                                if (x != "," && x != "." && x != ";" && x != "'" && x != "?" && x != "!" && x != "-" && x != ":" && x != " ")
                                 {
-                                    tmp++;
+
+                                    if (x == "a" || x == "A" || x == "ą" || x == "Ą" || x == "e" || x == "E" || x == "ę" || x == "Ę" || x == "i" || x == "I" || x == "o" || x == "O" || x == "ó" || x == "Ó" || x == "u" || x == "U" || x == "y" || x == "Y")
+                                    {
+                                        vowel++;
+                                    }
+                                    else
+                                    {
+                                        consonants++;
+                                    }
 
                                 }
 
                             }
-                            Console.WriteLine("Ilość liter w pliku : " + tmp);
+                            Console.WriteLine("Ilość samogłosek w pliku : " + vowel);
+                            Console.WriteLine("Ilość spółgłosek w pliku : " + consonants);
                         }
 
                     }
