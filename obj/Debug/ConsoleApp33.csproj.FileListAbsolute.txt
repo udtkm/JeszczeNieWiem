@@ -53,3 +53,10 @@ C:\Users\Tomasz\Desktop\xd\JeszczeNieWiem\obj\Debug\ConsoleApp33.csprojAssemblyR
 C:\Users\Tomasz\Desktop\xd\JeszczeNieWiem\obj\Debug\ConsoleApp33.csproj.CoreCompileInputs.cache
 C:\Users\Tomasz\Desktop\xd\JeszczeNieWiem\obj\Debug\ConsoleApp33.exe
 C:\Users\Tomasz\Desktop\xd\JeszczeNieWiem\obj\Debug\ConsoleApp33.pdb
+C:\Users\Człowiek Renesansu\Desktop\Nowy folder (3)\JeszczeNieWiem\bin\Debug\ConsoleApp33.exe.config
+C:\Users\Człowiek Renesansu\Desktop\Nowy folder (3)\JeszczeNieWiem\bin\Debug\ConsoleApp33.exe
+C:\Users\Człowiek Renesansu\Desktop\Nowy folder (3)\JeszczeNieWiem\bin\Debug\ConsoleApp33.pdb
+C:\Users\Człowiek Renesansu\Desktop\Nowy folder (3)\JeszczeNieWiem\obj\Debug\ConsoleApp33.csprojResolveAssemblyReference.cache
+C:\Users\Człowiek Renesansu\Desktop\Nowy folder (3)\JeszczeNieWiem\obj\Debug\ConsoleApp33.csproj.CoreCompileInputs.cache
+C:\Users\Człowiek Renesansu\Desktop\Nowy folder (3)\JeszczeNieWiem\obj\Debug\ConsoleApp33.exe
+C:\Users\Człowiek Renesansu\Desktop\Nowy folder (3)\JeszczeNieWiem\obj\Debug\ConsoleApp33.pdb
